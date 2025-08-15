@@ -792,11 +792,11 @@ body.no-scroll {
     box-shadow: 0 0 0 3px rgba(139, 157, 195, 0.5);
 }
 
-/* Timeline Section */
+/* Timeline Styles */
 .timeline {
     position: relative;
-    margin-top: 4rem;
-    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .timeline::before {
@@ -804,123 +804,97 @@ body.no-scroll {
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
     width: 4px;
     height: 100%;
-    background: var(--gradient);
-    border-radius: 2px;
+    background: var(--border-color);
+    transform: translateX(-50%);
 }
 
 .timeline-item {
+    padding: 20px 40px;
     position: relative;
-    margin-bottom: 3rem;
-    display: flex;
-    justify-content: center;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item[data-side="left"] {
+    left: 0;
+}
+
+.timeline-item[data-side="right"] {
+    left: 50%;
 }
 
 .timeline-content {
-    background: var(--accent-dark);
-    border-radius: 20px;
-    padding: 2rem;
+    padding: 20px;
+    background: var(--secondary-dark);
     border: 1px solid var(--border-color);
-    transition: var(--transition);
+    border-radius: 8px;
     position: relative;
-    width: 45%;
-    text-align: center;
-    box-shadow: 0 8px 16px var(--shadow-light);
+    transition: var(--transition);
 }
 
-.timeline-item[data-side="left"] .timeline-content {
-    margin-right: 3rem;
-}
-
-.timeline-item[data-side="right"] .timeline-content {
-    margin-left: 3rem;
-}
-
-.timeline-content::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 20px;
-    height: 20px;
-    background: var(--accent-color);
-    border-radius: 50%;
-    border: 2px solid var(--border-color);
-    transform: translateY(-50%);
-}
-
-.timeline-item[data-side="left"] .timeline-content::before {
-    right: -2.5rem;
-}
-
-.timeline-item[data-side="right"] .timeline-content::before {
-    left: -2.5rem;
-}
-
-.timeline-content::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 8px;
-    background: var(--gradient);
-    transition: height 0.4s ease;
-}
-
-.timeline-content:hover::after {
-    height: 12px;
-}
-
-.timeline-content:hover {
-    transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 20px 40px var(--shadow-medium);
+.timeline-item:hover .timeline-content {
+    color: var(--accent-color);
+    background: rgba(139, 157, 195, 0.1);
+    box-shadow: 0 0 10px rgba(139, 157, 195, 0.3);
+    transform: translateY(-3px);
 }
 
 .timeline-date {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
     display: block;
+    margin-bottom: 10px;
 }
 
 .timeline-title {
-    font-size: 1.9rem;
-    font-weight: 600;
-    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
     color: var(--text-primary);
-    line-height: 1.4;
+    margin-bottom: 10px;
 }
 
 .timeline-description {
-    color: var(--text-secondary);
-    line-height: 1.9;
-    margin-bottom: 1.5rem;
-    font-size: 1.05rem;
-}
-
-.timeline-social {
-    color: var(--text-secondary);
     font-size: 0.95rem;
-    line-height: 1.9;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 .timeline-social a {
     color: var(--accent-color);
     text-decoration: none;
+    font-size: 0.9rem;
     transition: var(--transition);
 }
 
 .timeline-social a:hover {
     color: var(--accent-hover);
+    text-decoration: underline;
 }
 
-.timeline-social i {
-    font-size: 1.25rem;
-    margin-right: 0.5rem;
-    vertical-align: middle;
+.timeline-item[data-side="left"] .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    border: 2px solid var(--primary-dark);
+}
+
+.timeline-item[data-side="right"] .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    border: 2px solid var(--primary-dark);
 }
 
 

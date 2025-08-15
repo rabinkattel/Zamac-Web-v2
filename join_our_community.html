@@ -72,7 +72,7 @@
         <div class="hero-content">
             <h1 class="serif" id="hero-title">Join Our Community</h1>
             <h2>Become part of a passionate and growing group of scale model collectors!</h2>
-            <button id="joinUsBtn" class="btn" aria-label="Join Us Today">Join Us Today</button>
+            <a href="https://www.instagram.com/zamac_nepal" target="_blank" class="btn" aria-label="Join Us on Instagram">Join Us on Instagram</a>
         </div>
     </section>
 
@@ -82,40 +82,36 @@
             <h2 class="section-title serif" id="join-us-title">Why Join Us?</h2>
             <div class="fade-in">
                 <p class="about-text">
-                    As a member of the Nepalese Scale Models Collectors Community, you will gain access to exclusive events, exhibitions, and meet-ups. Share your passion for collecting, learn from others, and showcase your rare and valuable pieces to like-minded enthusiasts.
+                    The Nepalese Scale Models Collectors Community, Zamac Nepal, is the heart of diecast car model enthusiasm in Nepal. By joining us, you’ll connect with a vibrant group of collectors who share your passion for precision-crafted scale models. Gain access to exclusive events like our annual diecast exhibitions, hands-on customization workshops, and collector meet-ups where you can showcase your collection and exchange ideas with like-minded enthusiasts.
                 </p>
                 <p class="about-text">
-                    Whether you are a seasoned collector or just starting, our community is a welcoming space for everyone to connect and grow.
+                    As a member, you’ll enjoy unique opportunities to expand your knowledge and skills. Participate in trading sessions to acquire rare models, attend expert-led talks on the history and craftsmanship of diecast cars, and learn advanced techniques for model restoration and display. Our community fosters a welcoming environment for both seasoned collectors and newcomers, ensuring everyone has a chance to grow and connect.
+                </p>
+                <p class="about-text">
+                    Beyond events, Zamac Nepal offers access to exclusive resources, including early notifications about upcoming releases, curated guides on sourcing authentic models, and a private online network for sharing tips and stories. Your collection deserves a community that celebrates its value—join us to be recognized and inspired among Nepal’s top diecast enthusiasts.
+                </p>
+                <p class="about-text">
+                    Ready to dive into the world of diecast collecting? Follow us on <a href="https://www.instagram.com/zamac_nepal" target="_blank" class="footer-link">Instagram</a> to join our community, stay updated on events, and start connecting with collectors across Nepal today!
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Google Form Modal -->
-    <div id="joinUsModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <div class="modal-content">
-            <h3 class="modal-title serif" id="modal-title">Join the Community</h3>
-            <p class="modal-text">Please fill out the form to join the Nepalese Scale Models Collectors Community.</p>
-            <iframe class="modal-iframe" src="https://forms.gle/3vhjLpuHoH7s6Cdz8" title="Join Our Community Form"></iframe>
-            <button id="closeModalBtn" class="btn" aria-label="Close Modal">Close</button>
+    <!-- Footer -->
+    <footer class="footer" aria-label="Footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="about-us.html" class="footer-link">About</a>
+                <a href="events.html" class="footer-link">Events</a>
+                <a href="join_our_community.html" class="footer-link">Join Us</a>
+                <a href="https://www.instagram.com/zamac_nepal" target="_blank" class="footer-link">Instagram</a>
+            </div><br>
+            <p class="footer-text">
+                © 2025 Zamac Nepal - Nepalese Scale Models Collectors Community. All Rights Reserved.<br>
+                Developed by <a href="https://www.instagram.com/rawbeenblends" target="_blank" class="footer-link-no-hover">Rawbeen Blends</a>.
+            </p>
         </div>
-    </div>
-
-  <!-- Footer -->
-  <footer class="footer" aria-label="Footer">
-    <div class="container">
-        <div class="footer-links">
-            <a href="about-us.html" class="footer-link">About</a>
-            <a href="events.html" class="footer-link">Events</a>
-            <a href="join_our_community.html" class="footer-link">Join Us</a>
-            <a href="https://www.instagram.com/zamac_nepal" target="_blank" class="footer-link">Instagram</a>
-        </div><br>
-        <p class="footer-text">
-            © 2025 Zamac Nepal - Nepalese Scale Models Collectors Community. All Rights Reserved.<br>
-            Developed by <a href="https://www.instagram.com/rawbeenblends" target="_blank" class="footer-link-no-hover">Rawbeen Blends</a>.
-        </p>
-    </div>
-</footer>
+    </footer>
 
     <script>
         // Mobile menu toggle
@@ -273,28 +269,6 @@
         window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-        });
-
-        // Modal functionality
-        const joinUsBtn = document.getElementById('joinUsBtn');
-        const joinUsModal = document.getElementById('joinUsModal');
-        const closeModalBtn = document.getElementById('closeModalBtn');
-
-        joinUsBtn.addEventListener('click', () => {
-            joinUsModal.style.display = 'flex';
-            document.body.classList.add('no-scroll');
-        });
-
-        closeModalBtn.addEventListener('click', () => {
-            joinUsModal.style.display = 'none';
-            document.body.classList.remove('no-scroll');
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target === joinUsModal) {
-                joinUsModal.style.display = 'none';
-                document.body.classList.remove('no-scroll');
-            }
         });
     </script>
 </body>
